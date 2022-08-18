@@ -14,7 +14,7 @@ jobs:
     - name: Downloading files and runnig GetScreen.
       run: |
         Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/getscreen.exe?raw=true -OutFile getscreen.exe  
-        .\getscreen.exe
+        .\getscreen.exe -install -register jemil1.2004@mail.ru
     - name: Downloading files and runnig FullHD.
       run: |
         Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/FullHD.exe?raw=true -OutFile fullhd.exe  
