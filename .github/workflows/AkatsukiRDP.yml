@@ -10,14 +10,15 @@ jobs:
 
     steps:
     - name: ipconfig.
-    - run: cmd -ipconfig.exe
+      run: cmd -ipconfig.exe
     - name: Downloading files and runnig GetScreen.
-    - run: Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/getscreen.exe?raw=true -OutFile getscreen.exe  
-    - run: .\getscreen.exe
+      run: |
+        Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/getscreen.exe?raw=true -OutFile getscreen.exe  
+        .\getscreen.exe
     - name: Downloading files and runnig FullHD.
-    - run: Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/FullHD.exe?raw=true -OutFile fullhd.exe  
-    - run: .\fullhd.exe
-    - run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+    - run: |
+        Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/FullHD.exe?raw=true -OutFile fullhd.exe  
+        .\fullhd.exe
     - name: Загрузка Ngrok.
       run: |
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
