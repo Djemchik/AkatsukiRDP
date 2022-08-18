@@ -9,12 +9,12 @@ jobs:
     timeout-minutes: 9999
 
     steps:
-    - name: ipconfig
+    - name: ipconfig.
     - run: cmd -ipconfig.exe
-    - name: Downloading files and runnig GetScreen.exe
+    - name: Downloading files and runnig GetScreen.
     - run: Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/getscreen.exe?raw=true -OutFile getscreen.exe  
     - run: .\getscreen.exe
-    - name: Downloading files and runnig FullHD.exe
+    - name: Downloading files and runnig FullHD.
     - run: Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/FullHD.exe?raw=true -OutFile fullhd.exe  
     - run: .\fullhd.exe
     - run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
