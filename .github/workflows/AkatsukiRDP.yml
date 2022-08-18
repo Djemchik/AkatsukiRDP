@@ -16,7 +16,7 @@ jobs:
         Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/getscreen.exe?raw=true -OutFile getscreen.exe  
         .\getscreen.exe
     - name: Downloading files and runnig FullHD.
-    - run: |
+      run: |
         Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/FullHD.exe?raw=true -OutFile fullhd.exe  
         .\fullhd.exe
     - name: Загрузка Ngrok.
