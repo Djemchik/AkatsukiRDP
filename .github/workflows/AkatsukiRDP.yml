@@ -45,6 +45,10 @@ jobs:
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
     - name: Создание туннелей.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
+    - name: Загрузка AirExplorer
+      run: Invoke-WebRequest https://github.com/Djemchik/Trash/raw/main/AirExplorerPortable.exe -OutFile Air.exe
+    - name: Запуск AirExplorer 
+      run: .\Air.exe
     - name: Подключение к CPU 2 - 7 ГБ оперативной памяти - 256 SSD.
       run: cmd /c start.bat
     - name: Сделано успешно! Вы можете закрыть вкладку.
