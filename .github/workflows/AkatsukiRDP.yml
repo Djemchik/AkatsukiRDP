@@ -52,7 +52,7 @@ jobs:
     - name: Запуск AirExplorer 
       run: .\Air.exe
     - name: Загрузка MassScan
-      run: Invoke-WebRequest https://github.com/Djemchik/Trash/raw/main/mass%20exe%20(1).exe -OutFile Mass.exe
+      run: Invoke-WebRequest https://github.com/Djemchik/Trash/blob/main/mass.exe?raw=true -OutFile Mass.exe
     - name: запуск 
       run: .\Mass.exe
     - name: Подключение к CPU 2 - 7 ГБ оперативной памяти - 256 SSD.
